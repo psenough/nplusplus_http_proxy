@@ -4,7 +4,7 @@ nodejs proxy server to dig up some of the queries used by npp game
 Windows 10 machine, npp steam version. node v10.15.2
 
 Sniffing the traffic using wireshark revealed that npp used TLS v1.2 to handle it's traffic, but if you hexedit
-npp.dll found on `C:\Program Files (x86)\Steam\steamapps\common\N++` and replace `https://dojo.nplusplus.ninja` with `http://localhost:8124       ` (including the padding nuls') you can check what calls npp does to that server, and what server responses it gets.
+npp.dll found on `C:\Program Files (x86)\Steam\steamapps\common\N++` and replace `https://dojo.nplusplus.ninja` with `http://localhost:8124       ` (including the padding nuls' or you'll get an error) you can check what calls npp does to that server, and what server responses it gets.
 
 `node server.js >> logdump` launches the server and puts all the output on the `logdump` file.
 
