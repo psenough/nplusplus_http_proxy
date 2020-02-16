@@ -8,13 +8,13 @@ npp.dll found on `C:\Program Files (x86)\Steam\steamapps\common\N++` and replace
 
 `node server.js >> logdump` launches the server and puts all the output on the `logdump` file.
 
-you can replicate the urls on a browser, some examples:
+you can replicate the urls on a browser, some examples for reference, you'll need to include your own user_id and steam_auth:
 
-`https://dojo.nplusplus.ninja/prod/steam/get_scores?app_id=&steam_id=76561198031272062&user_id=&steam_auth=&level_id=90&qt=0`
+`https://dojo.nplusplus.ninja/prod/steam/get_scores?app_id=230270&steam_id=76561198031272062&user_id=&steam_auth=&level_id=90&qt=0` (qt 0 global, qt 1 friends, qt 2 yours)
 
-`https://dojo.nplusplus.ninja/prod/steam/query_levels?app_id=230270&steam_id=76561198025195712&user_id=162041&steam_auth=&qt=7&mode=0&page=0` (returns a binary, probably including the maps themselfs)
+`https://dojo.nplusplus.ninja/prod/steam/query_levels?app_id=230270&steam_id=76561198025195712&user_id=&steam_auth=&qt=7&mode=0&page=0` (returns a binary, probably including the maps themselfs; qt is the browser type tab (best, new, hard, etc))
 
-`https://dojo.nplusplus.ninja/prod/steam/search/levels?app_id=230270&steam_id=76561198025195712&user_id=162041&steam_auth=&search=enr&mode=0&page=0`
+`https://dojo.nplusplus.ninja/prod/steam/search/levels?app_id=230270&steam_id=76561198025195712&user_id=&steam_auth=&search=enr&mode=0&page=0` (lists all levels with the string enr; mode 0 solo, mode 1 co-op, mode 2 race)
 
 `https://dojo.nplusplus.ninja/prod/steam/submit_score?app_id=230270&steam_id=76561198025195712&user_id=162041&steam_auth=
 0` (this in particular needs a POST form hijack to submit your replay, this is probably how Jey et al swindle their fake scores on the leaderboard, please don't abuse, it's lame for everyone especially yourself).
